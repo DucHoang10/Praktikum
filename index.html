@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Hoang</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <!--Design Header-->
+
+    <header class="header">
+         <h1>Kevin</h1>
+        <i class="bx bx-menu" id="menu"></i>
+
+        <nav class="navbar">
+            <a href="#startseite">Startseite</a>
+            <a href="#ausbildung">Ausbildung</a>
+            <a href="#skills">Skills</a>
+            <a href="#kontakt">Kontakt</a>
+            <span class="active-navbar"></span>
+        </nav>
+    </header>
+
+    <!--Design Startseite-->
+
+   <section class="Startseite" id="startseite">
+        <div class="text-box">
+            <h1>Hi, ich bin Kevin Hoang</h1>
+            <h1>& <span class="status">Student.</span></h1>
+            <p>Ich bin 26 Jahre alt, wohne in Wusterhausen/Dosse und studiere Softwareentwicklung an der IU Internationale Hochschule.</p>
+            <button type="button" class="btn">Nehmen Sie MICH!</button>
+        </div>
+        <div class="my-image">
+            <img src="./Images/IMG_8174-removebg-preview-modified (1).png" alt="Profilbild von Kevin Hoang">
+        </div>    
+   </section>
+
+   <!--Design Ausbildung-->
+
+    <section class="Ausbildung" id="ausbildung">
+        <h2 class="heading">Mein <span>Bildungsweg</span></h2>
+
+        <div class="Ausbildung-row">
+            <h3 class="title">Ausbildung</h3>
+
+            <div class="Ausbildung-box">
+                <div class="Ausbildung-content">
+                    <div class="content">
+                        <div class="year">
+                            <i class='bx bxs-calendar'></i> 09/2009 - 06/2015</div>
+                            <h3>Fachhochschulreife</h3>
+                            <p>Friedrich Ludwig Jahn Gymnasium</p>           
+                    </div>
+                </div>
+
+                <div class="Ausbildung-content">
+                    <div class="content">
+                        <div class="year">
+                            <i class='bx bxs-calendar'></i> 09/2018 - 08/2021</div>
+                            <h3>Ausbildung zum IT-Systemelektroniker - DB Kommunikationstechnik GmbH</h3>
+                            <p> • Aufbau und die Instandhaltung von unterschiedlichen technischen Anlagen im Bereich Sicherheit, ITK-Technik und Automatentechnik. Hierzu zählen Einbruch- und Brandmeldeanlagen, Video- und Beschallungsanlagen, Anzeigen, Ticketautomaten sowie Heißläuferortungsanlagen, diverse Funktechniken.<br>
+                                • Arbeit mit Netzwerktechnik von Kupfer bis Glasfaser<br>
+                                • Ausführen von Kleinmontagearbeiten</p>
+                    </div>
+                </div>
+
+                <div class="Ausbildung-content">
+                    <div class="content">
+                        <div class="year">
+                            <i class='bx bxs-calendar'></i> 12/2022 - heute</div>
+                            <h3>Fernstudium-Softwareentwicklung an der IU Internationale Hochschule</h3>
+                    </div>
+                </div>      
+            </div>
+        </div>
+    </section>
+
+    <!--Design Skills-->
+
+    <section class="Skills" id="skills">
+        <h2 class="heading-skills">Meine <span>Skills</span></h2>
+
+        <div class="skills-row">
+            <div class="skills-column">
+                <h3 class="title">Coding</h3>
+
+                <div class="skills-box">
+                    <div class="skills-content">
+                        <h3>Grundlegende Kenntnisse in:</h3>
+                        <i class='bx bxl-html5'></i>
+                        <i class='bx bxl-css3' ></i>
+                        <i class='bx bxl-javascript' ></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-column">
+                <h3 class="title">Erfahrungen</h3>
+
+                <div class="skills-box">
+                    <div class="skills-content">
+                        <p>Mein erstes richtiges Projekt ist diese persönliche Website von mir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Design Kontakt-->
+
+    <section class="Kontakt" id="kontakt">
+        <h2 class="heading">Kontaktiere <span>Mich!</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Vollständiger Name" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="E-Mail-Adresse" required>
+                    <span class="focus"></span>
+                </div>
+
+                <div class="input-field">
+                    <input type="number" placeholder="Handynummer" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="E-Mail-Adresse bestätigen" required>
+                    <span class="focus"></span>
+                </div>
+            </div>
+
+            <div class="textarea-field">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Deine Nachricht" required></textarea>
+                <span class="focus"></span>
+            </div>
+
+            <div class="btn-box btns">
+                <button type="submit" class="btn">Absenden</button>
+            </div>
+        </form>
+    </section>
+
+    <!--Design Fußzeile-->
+    
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by Kevin Hoang | All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-Top">
+            <a href="#"><i class='bx bx-up-arrow-alt' ></i></a>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

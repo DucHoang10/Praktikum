@@ -1,0 +1,581 @@
+/*Importiert die Schriftart „Poppins“ von Google Fonts*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*Setzt globale Stile, einschließlich Schriftart und grundlegender Margin-und Padding-Resets.
+Definiert Farbvariablen für eine konsistente Farbpalette.*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+
+    --blue-color: #14a1e8;
+    --bg-color: #001625;
+    --item-bg-color: #00263e;
+    --text-color: #ededed;
+    ---second-item-bg-color: #002e4b;
+    ---section-color: #002036;
+}
+
+html {
+    font-size: 65%;
+}
+
+/*Setzt den Hintergrund und die Mindesthöhe für alle Sektionen*/
+
+section {
+    background-color: var(---section-color);
+    min-height: 100vh;
+    padding: 0 8%;
+}
+
+/*Positioniert den Header fixiert oben auf der Seite.
+Stilisiert die Navigation mit Hover-Effekten und Animationen.*/
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 2rem;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 11rem;
+    z-index: 99;
+    opacity: 0;
+    animation: to_bottom 1s ease forwards;
+    transition: .3s;
+}
+
+.logo {
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+
+.header.bar {
+    background: var(--bg-color);
+}
+
+header .bx-menu{
+    display: none;
+}
+
+header nav a{
+    color: var(--text-color);
+    font-size: 2.5rem;
+    text-decoration: none;
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+header nav a:hover,
+header nav .active{
+    color: var(--blue-color);
+}
+
+/*Stilisiert die Startseite mit Flexbox für Layout, Animationen für Texte und Schaltflächen,
+sowie einem runden Profilbild*/
+
+.Startseite {
+    display: flex;
+    background-color: var(--bg-color);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    color: var(--text-color);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 11rem;
+}
+
+.Startseite .text-box{
+    font-size: 3.5rem;  
+}
+
+.Startseite .text-box h1{
+    animation: to_right 2s ease forwards .6s;
+}
+
+.Startseite .text-box h1 .status{
+    animation: to_right 2s ease forwards .6s;
+}
+
+
+.Startseite .status{
+    color: var(--blue-color);
+}
+
+.Startseite .text-box p{
+    font-size: 1.6rem;
+    margin: 1.5rem 0;
+    animation: to_right 2s ease forwards 1s;
+}
+
+.btn{
+    color: var(--text-color);
+    font-size: 2rem;
+    text-decoration: none;
+    width: 22rem;
+    height: 4.5rem;
+    border: .2rem solid var(--blue-color);
+    border-radius: 2rem;
+    background-color: var(--blue-color);
+    cursor: pointer;
+    transition: .3s;
+    animation: to_right 2s ease forwards 1s;
+}
+
+.btn:hover{
+    box-shadow: 0 0 1rem var(--blue-color);
+}
+
+.my-image{
+    position: relative;
+    display:flex;
+    margin-left: 10rem;
+    width: 45rem;
+    height: 45rem;
+    border-radius: 50%; 
+}
+
+.my-image img{
+    width: 100%;
+    border-radius: 50%;
+    border: .3rem solid var(--blue-color);
+    box-shadow: 5px 5px 50px var(--blue-color);
+    background-color: var(--bg-color);
+    animation: to_left 2s ease forwards 1s;
+    opacity: 0;
+}
+
+.text-box *{
+    opacity: 0;
+}
+
+/*Definiert Animationen für das Einblenden von Elementen von verschiedenen Richtungen.*/
+
+@keyframes to_bottom {
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes to_right {
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes to_left {
+    0%{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*Stile für den Ausbildungsabschnitt, einschließlich des Layouts und der Darstellung einzelner Ausbildungseinträge.*/
+
+.Ausbildung{
+    display:flex;
+    color: var(--text-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: auto;
+    padding-bottom: 10rem;
+    padding-top: 5rem;
+}
+
+.Ausbildung .Ausbildung-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.heading{
+    font-size: 5rem;
+    text-align: center;
+    color: var(--text-color);
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+}
+
+span{
+    color: var(--blue-color);
+}
+
+.Ausbildung-row .title{
+    font-size: 2.5rem;
+    margin: 0 0 -5rem 2.5rem;
+}
+
+.Ausbildung-row .Ausbildung-box{
+    border-left: .3rem solid var(--blue-color);
+}
+
+.Ausbildung-box .Ausbildung-content{
+    position: relative;
+    padding: 2rem;
+    margin-bottom: -4.1rem;
+}
+
+.Ausbildung-box .Ausbildung-content::before {
+    content: '';
+    position: absolute;
+    left: -1.2rem;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    background: var(--blue-color);
+    border-radius: 50%;
+}
+
+.Ausbildung-content .content{
+    position: relative;
+    padding: 1.5rem;
+    border: .3rem solid var(--blue-color);
+    border-radius: .5rem;
+    margin-top: -2rem;
+    margin-bottom: 3.5rem;
+}
+
+.Ausbildung-content .content .year{
+    font-size: 1.5rem;
+    color: var(--blue-color);
+    padding-bottom: .5rem;
+}
+
+.Ausbildung-content .content .year i{
+    padding-right: .5rem;
+}
+
+.Ausbildung-content .content h3{
+    font-size: 2rem;
+}
+
+.Ausbildung-content .content p{
+    font-size: 1.6rem;
+    padding-top: .1rem;
+}
+
+h3 {
+    color: var(--text-color);
+}
+
+p{
+    color: var(--text-color);
+}
+
+/*Stile für den Skills-Abschnitt mit Flexbox-Layout und interaktiven Icons*/
+
+.Skills {
+    min-height: auto;
+    padding-bottom: 10rem;
+    padding-top: 5rem;
+    background: var(--bg-color);
+}
+.heading-skills{
+    color: var(--text-color);
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+}
+.Skills .skills-row{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.skills-row .skills-column {
+    flex: 1 1 40rem;
+}
+
+.skills-column .title {
+    font-size: 3rem;
+    margin: 0 0 1.5rem;
+}
+
+.skills-box .skills-content {
+    position: relative;
+    font-size: 1.6rem;
+    padding: .2rem 2.5rem;
+    margin-right: 16rem;
+    border: .3rem solid var(--blue-color);
+    border-radius: .5rem;
+}
+
+.skills-box .skills-content i{
+    font-size: 15rem;
+    color: var(--blue-color);
+    margin-right: 3rem;
+    margin-top: 2rem;
+    padding: 6px;
+    border: 2px solid var(--blue-color);
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.skills-box .skills-content i:hover{
+    color: white;
+    background-color: var(--blue-color);
+    box-shadow: 0 0 15px var(--blue-color);
+}
+
+/*Stilisiert das Kontaktformular mit flexiblen Eingabefeldern und Textbereichen.*/
+
+.Kontakt {
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+
+.Kontakt form {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.Kontakt form .input-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Kontakt form .input-box .input-field {
+    position: relative;
+    width: 49%;
+    margin: .9rem 0;
+}
+
+.Kontakt form .input-box .input-field input,
+.Kontakt form .textarea-field textarea {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid var(--blue-color);
+}
+
+.Kontakt form .input-box .input-field input::placeholder,
+.Kontakt form .textarea-field textarea::placeholder {
+    color: var(--text-color);
+}
+
+.Kontakt form .textarea-field {
+    margin: .8rem 0 2.7rem;
+}
+
+/*Gestaltet den Footer und fügt interaktive Elemente hinzu.*/
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(---second-item-bg-color);
+}
+
+.footer-text {
+    font-size: 1.6rem;
+}
+
+.footer-Top a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: .8rem;
+    background: var(--blue-color);
+    border: .2rem solid var(--blue-color);
+    border-radius: .6rem;
+}
+
+.footer-Top a i {
+    font-size: 3.4rem;
+    color: var(--bg-color);
+    transition: .3s;
+}
+
+.footer-Top a i:hover{
+    color: white;
+    background-color: var(--blue-color);
+    box-shadow: 0 0 15px var(--blue-color);
+}
+
+/*Die verschiedenen @media-Abfragen sorgen dafür, dass das Layout auf verschiedenen Bildschirmgrößen gut aussieht,
+von Desktop-Bildschirmen bis zu Mobilgeräten. Anpassungen umfassen Änderungen in der Schriftgröße, Layout-Anpassungen
+und das Verstecken von Elementen bei kleineren Bildschirmgrößen*/
+
+@media (max-width: 1200px){
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px){
+    .header {
+        padding: 2rem 4%;
+    }
+
+    .my-image{
+        width: 45rem;
+        height: 35rem;
+    }
+
+    section {
+        padding: 10rem 4% 2rem;
+    }
+
+    .home {
+        padding:0 4%;
+    }
+
+    .footer {
+        padding: 2rem 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        background: var(--bg-color);
+    }
+
+    #menu {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        padding: 1rem 4%;
+        background: var(--blue-color);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        z-index: 1;
+        transition: .25s ease;
+        transition-delay: .25s;
+    }
+
+    .navbar.active {
+        left: 0;
+        transition-delay: 0s;
+    }
+
+    .navbar .active-navbar {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        z-index: -1;
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+
+    .navbar.active .active-navbar {
+        left: 0;
+        transition-delay: .25s;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .my-image {
+       display: none; 
+    }
+}
+
+@media (max-width: 520px) {
+    html {
+        font-size: 55%;
+    }
+
+}
+
+@media (max-width: 462px) {
+
+    .text-box h1 {
+        font-size: 5rem;
+    }
+
+    .Ausbildung {
+        padding: 10rem 4% 5rem 5%;
+    }
+
+    .kontakt form .input-box .input-field {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 371px) {
+
+    .Startseite {
+        justify-content: center;
+    }
+
+    .text-box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-box h1 {
+        font-size: 5rem;
+    }
+
+    .skills-box .skills-content {
+        text-align: center;
+    }
+}
+
+
+
+
